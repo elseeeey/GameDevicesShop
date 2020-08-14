@@ -18,9 +18,9 @@ namespace GameDevicesStore.DataAcces.Entities
 
         /* Navigation Properties*/
 
-        public int TypeId { get; set; }
+        public int CategoryId { get; set; }
 
-        public Type Type { get; set; }
+        public Category Category { get; set; }
 
         public int ProducerId { get; set; }
 

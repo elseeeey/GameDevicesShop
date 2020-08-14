@@ -56,7 +56,8 @@
     <Compile Include="ApplicationContext.cs" />
     <Compile Include="Entities\Device.cs" />
     <Compile Include="Entities\Producer.cs" />
-    <Compile Include="Entities\Type.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Initializers\DevicesInit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

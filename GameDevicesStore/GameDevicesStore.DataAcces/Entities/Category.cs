@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameDevicesStore.DataAcces.Entities
 {
-    public class Type
+    public class Category
     {
         public int Id { get; set; }
 
