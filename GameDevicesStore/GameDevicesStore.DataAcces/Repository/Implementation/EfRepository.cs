@@ -15,32 +15,40 @@ namespace GameDevicesStore.DataAcces.Repository.Implementation
 
         public EfRepository(DbContext context)
         {
-            _context = context; 
+            _context = context;
+
+            _set = _context.Set<TEntity>();
         }
+
+        
 
         public void Create(TEntity entity)
         {
-            throw new NotImplementedException();
+            _set.Add(entity);
+            _context.SaveChanges();
         }
 
         public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            _set.Remove(entity);
+            _context.SaveChanges();
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            //Get entities from database, for example all devices
+        
+            return _set.AsEnumerable();
         }
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return _set.Find(id);
         }
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Entry(entity).State = EntityState.Modified;
         }
     }
 }
