@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace GameDevicesStore.DataAcces.Initializers
 {
-    public class DevicesInit : DropCreateDatabaseAlways<ApplicationContext>
+    public class DevicesInit : DropCreateDatabaseAlways<EFContext>
     {
-        protected override void Seed(ApplicationContext context)
+        protected override void Seed(EFContext context)
         {
             var categories = new List<Category>
             {

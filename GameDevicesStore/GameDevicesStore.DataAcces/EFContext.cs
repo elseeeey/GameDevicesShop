@@ -12,7 +12,7 @@ namespace GameDevicesStore.DataAcces
     using GameDevicesStore.DataAcces.Initializers;
     using System.Data.Entity;
 
-    public class ApplicationContext : DbContext
+    public class EFContext : DbContext
     {
         public DbSet<Device> Devices { get; set; }
 
@@ -20,7 +20,7 @@ namespace GameDevicesStore.DataAcces
 
         public DbSet<Producer> Producers { get; set; }
 
-        public ApplicationContext()
+        public EFContext()
             : base("name=ApplicationContext")
         {
             Database.SetInitializer(new DevicesInit());
