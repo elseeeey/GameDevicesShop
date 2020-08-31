@@ -14,7 +14,7 @@ namespace GameDevicesStore.DataAcces.Initializers
         {
             var categories = new List<Category>
             {
-                new Category { Name = "Mouse"},
+                new Category { Name = "Mouses"},
                 new Category { Name = "Headsets"},
                 new Category { Name = "Keyboards"},
                 new Category { Name = "MousePads"},
@@ -34,7 +34,50 @@ namespace GameDevicesStore.DataAcces.Initializers
                 new Producer { Name = "Benq"},
                 new Producer { Name = "A4tech"},
             };
-        }
+
+            var devices = new List<Device>()
+            {
+                new Device
+                {
+                    Name = "Razer Naga",
+                    Price = 110,
+                    ReleaseDate = new DateTime(2009,01,01),
+                    Producer = producers.FirstOrDefault(x=>x.Name == "Razer"),
+                    Category = categories.FirstOrDefault(x=>x.Name == "Mouses")
+
+                },
+                new Device
+                {
+                    Name = "HyperX Alloy FPS RGB",
+                    Price = 130,
+                    ReleaseDate = new DateTime(2018,01,01),
+                    Producer = producers.FirstOrDefault(x=>x.Name == "Hyper X"),
+                    Category = categories.FirstOrDefault(x=>x.Name == "Keyboards")
+
+                },
+                new Device
+                {
+                    Name = "Arctis 1 Wireless Cyberpunk Edition",
+                    Price = 150,
+                    ReleaseDate = new DateTime(2020,03,05),
+                    Producer = producers.FirstOrDefault(x=>x.Name == "Steel Series"),
+                    Category = categories.FirstOrDefault(x=>x.Name == "Headsets")
+
+                },
+                new Device
+                {
+                    Name = "G840 XL Gaming Mousepad",
+                    Price = 53,
+                    ReleaseDate = new DateTime(2019,04,15),
+                    Producer = producers.FirstOrDefault(x=>x.Name == "Logitech"),
+                    Category = categories.FirstOrDefault(x=>x.Name == "MousePads")
+
+                },
+            };
+
+            context.Devices.AddRange(devices);
+            context.SaveChanges();
+        } 
 
     }
 }

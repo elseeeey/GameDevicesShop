@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameDevicesStore.Client.Utilts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,7 @@ namespace GameDevicesStore.Client
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            AutofacConfig.ConfigureContainer();
         }
     }
 }

@@ -21,8 +21,8 @@ namespace GameDevicesStore.Domain.Services.Implementation
 
         public ICollection<Device> GetDevices()
         {
-            var games = _repos.GetAll();
-            return games.ToList();
+            var devices = _repos.GetAll();
+            return devices.ToList();
         }
     }
 }
