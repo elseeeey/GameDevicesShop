@@ -21,8 +21,10 @@ namespace GameDevicesStore.Client.Utilts
     {
         public static void ConfigureContainer()
         {
+            //Створюємо білдер  нашого контейнера
             var builder = new ContainerBuilder();
 
+            //Ми реєстуреємо всі білдери в проекті
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
             builder.RegisterType<EFContext>().As<DbContext>();

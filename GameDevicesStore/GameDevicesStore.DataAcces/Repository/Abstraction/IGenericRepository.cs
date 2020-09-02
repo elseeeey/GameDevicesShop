@@ -11,7 +11,7 @@ namespace GameDevicesStore.DataAcces.Repository.Abstraction
         void Create(TEntity entity);
 
         void Delete(TEntity entity);
-
+                                
         void Update(TEntity entity);
 
         IEnumerable<TEntity> GetAll();

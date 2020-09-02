@@ -1,23 +1,24 @@
 ﻿@{ 
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @using GameDevicesStore.DataAcces.Entities
 
-<!DOCTYPE html>
+    <div class="container">
+        <div class="row">
+            @foreach (Device device in ViewBag.Devices)
+            {
+                <div class="col-4">
+                    <div class=" card bg-info">
+                        <div class="card-body">
+                            <p>@device.Name</p>
+                            <p>@device.Price</p>
+                            <p>@device.ReleaseDate</p>
+                        </div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        @foreach (Device device in ViewBag.Devices)
-        {
-          <p>@device.Name</p>
-         <p>@device.Price</p>
-         <p>@device.ReleaseDate</p>
-        }
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-</body>
-</html>
+
